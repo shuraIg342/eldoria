@@ -1,0 +1,493 @@
+/* ===== АДАПТИВНЫЙ ДИЗАЙН ===== */
+
+/* Большие экраны (Desktop 1920px+) */
+@media (min-width: 1920px) {
+    .content {
+        max-width: 1600px;
+        margin-left: 320px;
+        padding: 4rem;
+    }
+    
+    .hero-title {
+        font-size: 7rem;
+    }
+}
+
+/* Планшеты и небольшие ноутбуки (768px - 1024px) */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 70px;
+    }
+    
+    .sidebar:hover {
+        width: 280px;
+    }
+    
+    .content {
+        margin-left: 70px;
+        padding: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .maps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .world-teaser {
+        grid-template-columns: 1fr;
+    }
+    
+    .explore-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .explore-btn {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .lore-content {
+        max-width: 100%;
+    }
+}
+
+/* Планшеты в портретной ориентации (768px) */
+@media (max-width: 768px) {
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 2px solid var(--color-border);
+    }
+    
+    .sidebar:hover {
+        width: 100%;
+    }
+    
+    .sidebar-header {
+        padding: 1.5rem;
+        justify-content: center;
+    }
+    
+    .sidebar-title {
+        opacity: 1;
+    }
+    
+    .nav-item {
+        flex-direction: row;
+        padding: 1rem;
+        justify-content: center;
+    }
+    
+    .nav-text {
+        opacity: 1;
+    }
+    
+    /* Content */
+    .content {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 1.5rem 1rem;
+    }
+    
+    /* Hero */
+    .hero-title {
+        font-size: 3rem;
+        letter-spacing: 0.1em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-divider {
+        width: 150px;
+    }
+    
+    /* Runes */
+    .rune-circle {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .rune {
+        font-size: 2rem;
+    }
+    
+    /* Cards */
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .teaser-card {
+        padding: 2rem;
+    }
+    
+    /* Settlements */
+    .settlement-detail {
+        padding: 1.5rem;
+    }
+    
+    .resident-card {
+        padding: 1.2rem;
+    }
+    
+    /* Dictionary */
+    .dictionary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Lore */
+    .lore-chapter {
+        padding: 1.5rem;
+    }
+    
+    .lore-chapter h3 {
+        font-size: 1.6rem;
+    }
+    
+    .lore-block h4 {
+        font-size: 1.2rem;
+    }
+    
+    /* Character */
+    .char-block {
+        padding: 1.5rem;
+    }
+    
+    .class-detail {
+        padding: 1.2rem;
+    }
+    
+    /* Maps */
+    .map-card {
+        padding: 1.5rem;
+    }
+    
+    .map-container {
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Мобильные телефоны (480px - 767px) */
+@media (max-width: 480px) {
+    /* Typography */
+    .hero-title {
+        font-size: 2.2rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .content-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .content-header p {
+        font-size: 1rem;
+    }
+    
+    /* Sidebar */
+    .sidebar-header {
+        padding: 1rem;
+    }
+    
+    .sidebar-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .sidebar-title {
+        font-size: 1.2rem;
+    }
+    
+    .nav-item {
+        padding: 0.8rem;
+    }
+    
+    .nav-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .nav-text {
+        font-size: 1rem;
+    }
+    
+    /* Runes */
+    .rune-circle {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .rune {
+        font-size: 1.5rem;
+    }
+    
+    /* Quote */
+    .lore-quote {
+        padding: 1.5rem;
+    }
+    
+    .lore-quote p {
+        font-size: 1rem;
+    }
+    
+    .lore-quote cite {
+        font-size: 0.9rem;
+    }
+    
+    /* Cards */
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .teaser-card {
+        padding: 1.5rem;
+    }
+    
+    .teaser-icon {
+        font-size: 2.5rem;
+    }
+    
+    .teaser-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Buttons */
+    .explore-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .explore-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .explore-btn {
+        padding: 1rem 1.5rem;
+    }
+    
+    .btn-icon {
+        font-size: 1.2rem;
+    }
+    
+    .btn-text {
+        font-size: 1rem;
+    }
+    
+    /* Settlements */
+    .settlement-map img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .settlement-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .resident-card h5 {
+        font-size: 1.1rem;
+    }
+    
+    /* Dictionary */
+    .term-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .term-card p {
+        font-size: 0.95rem;
+    }
+    
+    /* Lore */
+    .lore-chapter {
+        padding: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .lore-chapter h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .lore-block {
+        margin-bottom: 1.5rem;
+    }
+    
+    .lore-block h4 {
+        font-size: 1.1rem;
+    }
+    
+    .lore-block p,
+    .lore-block li {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    .lore-block blockquote {
+        padding-left: 1rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Character */
+    .char-block h3 {
+        font-size: 1.4rem;
+    }
+    
+    .class-detail h4 {
+        font-size: 1.1rem;
+    }
+    
+    .class-detail p {
+        font-size: 0.95rem;
+    }
+    
+    .race-list li,
+    .class-list li {
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+    }
+    
+    /* Maps */
+    .map-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .map-description {
+        font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    .footer-decoration {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+    
+    .decoration-line {
+        max-width: 150px;
+        width: 100%;
+    }
+}
+
+/* Очень маленькие экраны (320px - 479px) */
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .content {
+        padding: 1rem 0.5rem;
+    }
+    
+    .content-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .card,
+    .teaser-card,
+    .resident-card,
+    .term-card,
+    .lore-chapter,
+    .char-block {
+        padding: 1rem;
+    }
+    
+    .explore-btn {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 40vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .atmosphere-section {
+        padding: 2rem 0;
+    }
+    
+    .rune-circle {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Плавные переходы для всех устройств */
+* {
+    transition-property: transform, opacity, background-color, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+/* Улучшение для тач-устройств */
+@media (hover: none) {
+    .nav-item:hover {
+        transform: none;
+    }
+    
+    .card:hover,
+    .teaser-card:hover,
+    .map-card:hover {
+        transform: none;
+    }
+    
+    .explore-btn:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Предотвращение горизонтального скролла */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Оптимизация изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Улучшение читаемости на мобильных */
+@media (max-width: 768px) {
+    p, li {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+    }
+}

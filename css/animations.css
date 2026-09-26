@@ -1,0 +1,246 @@
+/* Приветственный баннер */
+#welcome-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #1a0033 0%, #0d001a 50%, #000000 100%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow: hidden;
+}
+
+#welcome-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(120, 0, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(0, 100, 255, 0.3) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+#welcome-banner h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue), var(--color-accent-purple));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient 3s ease infinite;
+    text-shadow: 0 0 30px rgba(168, 85, 247, 0.5);
+    z-index: 1;
+    letter-spacing: 0.1em;
+}
+
+@keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+#welcome-banner .subtitle {
+    font-size: 1.5rem;
+    color: var(--color-accent-light);
+    margin-top: 1rem;
+    opacity: 0.8;
+    z-index: 1;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+#welcome-banner .click-hint {
+    position: absolute;
+    bottom: 50px;
+    font-size: 1rem;
+    color: #6b7280;
+    animation: bounce 2s infinite;
+    z-index: 1;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#welcome-banner.dismissed {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Частицы */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(168, 85, 247, 0.6);
+    border-radius: 50%;
+    animation: float 10s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-100vh) translateX(50px);
+    }
+}
+
+/* Основной контент */
+#main-content {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+#main-content.visible {
+    opacity: 1;
+}
+
+/* Плавающая анимация */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Появление секций */
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ОПТИМИЗАЦИЯ ЗАСТАВКИ ПОД МОБИЛЬНЫЕ ===== */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+    #welcome-banner h1 {
+        font-size: 4rem;
+    }
+    
+    #welcome-banner .subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+/* Планшеты портрет */
+@media (max-width: 768px) {
+    #welcome-banner h1 {
+        font-size: 3rem;
+        letter-spacing: 0.05em;
+    }
+    
+    #welcome-banner .subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+    
+    #welcome-banner .click-hint {
+        font-size: 0.9rem;
+        bottom: 30px;
+    }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 480px) {
+    #welcome-banner h1 {
+        font-size: 2.2rem;
+        letter-spacing: 0.02em;
+    }
+    
+    #welcome-banner .subtitle {
+        font-size: 1rem;
+        padding: 0 1.5rem;
+    }
+    
+    #welcome-banner .click-hint {
+        font-size: 0.85rem;
+        bottom: 20px;
+    }
+    
+    /* Уменьшаем количество частиц на мобильных */
+    .particle {
+        width: 3px;
+        height: 3px;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 320px) {
+    #welcome-banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    #welcome-banner .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    #welcome-banner .click-hint {
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape orientation (горизонтальная ориентация) */
+@media (max-height: 500px) and (orientation: landscape) {
+    #welcome-banner h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    #welcome-banner .subtitle {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    #welcome-banner .click-hint {
+        display: none; /* Скрываем подсказку на горизонтальных экранах */
+    }
+}

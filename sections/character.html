@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание персонажа - Эльдория</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS файлы -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <!-- Боковая навигация -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="fas fa-dragon"></i>
+                </div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            
+            <a href="../index.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="nav-text">Главная</span>
+            </a>
+            
+            <a href="maps.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <span class="nav-text">Карты</span>
+            </a>
+            
+            <a href="settlements.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-house-chimney"></i>
+                </div>
+                <span class="nav-text">Поселения</span>
+            </a>
+            
+            <a href="dictionary.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <span class="nav-text">Словарь</span>
+            </a>
+            
+            <a href="lore.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <span class="nav-text">Лор Эльдории</span>
+            </a>
+            
+            <a href="character.html" class="nav-item active">
+                <div class="nav-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <span class="nav-text">Создание персонажа</span>
+            </a>
+        </nav>
+
+        <!-- Контент -->
+        <main class="content">
+            <div class="content-header">
+                <h2><i class="fas fa-user-shield"></i> Создание персонажа: Условия</h2>
+                <p>Правила и ограничения мира Эльдории</p>
+            </div>
+
+            <div class="character-content">
+                <div class="char-block">
+                    <h3>Выбор расы</h3>
+                    <ul class="race-list">
+                        <li>Люди</li>
+                        <li>Полурослики</li>
+                        <li>Дварфы</li>
+                        <li>Эльфы</li>
+                        <li>Полуэльфы</li>
+                    </ul>
+                </div>
+
+                <div class="char-block">
+                    <h3>Доступные классы</h3>
+                    <ul class="class-list">
+                        <li>Воин</li>
+                        <li>Плут</li>
+                        <li>Варвар</li>
+                        <li>Монах</li>
+                    </ul>
+                </div>
+
+                <div class="char-block">
+                    <h3>Адаптированные классы (работают с изменениями)</h3>
+                    
+                    <div class="class-detail">
+                        <h4>Следопыт (Ranger)</h4>
+                        <p><strong>Изменения:</strong> заклинания заменяются на алхимию, травничество и охотничьи хитрости. «Разговор с животными» — это не магия, а навык чтения следов. «Лечение ран» — мази и настойки. «Туманное облако» — дымовая шашка.</p>
+                    </div>
+
+                    <div class="class-detail">
+                        <h4>Друид (Druid)</h4>
+                        <p><strong>Сильно ограничен.</strong> Полноценный друид с заклинаниями и дикой формой недоступен — это чистая магия Резонанса.</p>
+                        <p><strong>Что можно:</strong> игрок может быть «Хранителем Рощи» — персонажем, который знает природу, травы, повадки зверей. Без заклинаний. Без превращения в животных. Это скорее травник-следопыт с философией друида.</p>
+                        <p>Если игрок очень хочет — можно дать одну «дикую форму» как врождённую мутацию: персонаж может превращаться в одного конкретного зверя, но не контролирует это полностью. Превращение происходит в момент стресса, а не по желанию.</p>
+                        <p>Игрок и Мастер договариваются о «переводе» каждого заклинания в немагический аналог.</p>
+                    </div>
+
+                    <div class="class-detail">
+                        <h4>Бард (Bard)</h4>
+                        <p><strong>Изменения:</strong> «магия» барда — это психология, гипноз, акустика, знание древних слов, на которые реагируют автоматоны. Inspiration — не заклинание, а харизма.</p>
+                        <p>Барды Эльдории — сказители, шпионы, дипломаты. Они хранят истории Эпохи Резонанса в песнях. Немая Церковь их не любит: «песни будят эхо». Подклассы с сильной магией (Lore, Glamour) требуют творческой адаптации.</p>
+                    </div>
+                </div>
+
+                <div class="char-block warning">
+                    <h3>Классы с магией (требуют сюжетного обоснования)</h3>
+                    <p>Эти классы технически недоступны, но если игрок очень хочет — можно разрешить с жёсткими условиями.</p>
+                    
+                    <div class="class-detail">
+                        <h4>Паладин (Paladin)</h4>
+                        <p><strong>Как это работает в Эльдории:</strong> боги молчат, но сила паладина идёт не от богов, а от Клятвы. Это редчайший феномен: человек настолько верит в свой обет, что его воля буквально искажает реальность.</p>
+                        <p><strong>Цена:</strong> Немая Церковь считает паладинов опаснейшими еретиками. Их сила не должна работать, но работает — значит, это не божественное благословение, а аномалия. Паладин — изгой и цель для инквизиции.</p>
+                        <p><strong>Механика:</strong> заклинания паладина работают как обычно, но снаружи это выглядит странно. Lay on Hands — не свечение, а тепло. Divine Smite — не сияние, а концентрированный удар.</p>
+                    </div>
+
+                    <div class="class-detail">
+                        <h4>Колдун (Warlock)</h4>
+                        <p><strong>Как это работает:</strong> в Эльдории нет демонов и фей, но есть Какофония. Колдун — это человек, который случайно или намеренно настроился на частоту Какофонии и заключил с ней неосознанный «пакт». Он не служит злу, он просто слышит то, чего не слышат другие.</p>
+                        <p><strong>Цена:</strong> безумие. Каждый раз, когда колдун использует заклинание, Мастер втайне делает бросок. При провале — кратковременная галлюцинация, шёпот, потеря концентрации. Колдун медленно теряет грань между собой и Какофонией. Немая Церковь убьёт его на месте, если узнает.</p>
+                        <p><strong>Механика:</strong> стандартный колдун, но источник силы — не покровитель, а Резонанс/Какофония. Патроны переосмысливаются: Great Old One — сама Какофония, Fiend — её разрушительный аспект, Archfey — искажённая природа.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эльдория - Лор Мира</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS файлы -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Приветственный баннер -->
+    <div id="welcome-banner">
+        <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 70%; animation-delay: 6s;"></div>
+        <div class="particle" style="left: 80%; animation-delay: 7s;"></div>
+        <div class="particle" style="left: 90%; animation-delay: 8s;"></div>
+        
+        <h1>ЭЛЬДОРИЯ</h1>
+        <p class="subtitle">Мир, полный тайн и приключений</p>
+        <p class="click-hint">Нажмите в любом месте, чтобы войти</p>
+    </div>
+
+    <!-- Основной контент -->
+    <div id="main-content">
+        <!-- Боковая навигация -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="fas fa-dragon"></i>
+                </div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            
+            <a href="index.html" class="nav-item active">
+                <div class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="nav-text">Главная</span>
+            </a>
+            
+            <a href="sections/maps.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <span class="nav-text">Карты</span>
+            </a>
+            
+            <a href="sections/settlements.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-house-chimney"></i>
+                </div>
+                <span class="nav-text">Поселения</span>
+            </a>
+            
+            <a href="sections/dictionary.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <span class="nav-text">Словарь</span>
+            </a>
+            
+            <a href="sections/lore.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <span class="nav-text">Лор Эльдории</span>
+            </a>
+            
+            <!-- ДОБАВЛЕНО: Ссылка на Летопись -->
+            <a href="sections/timeline.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <span class="nav-text">Летопись</span>
+            </a>
+            
+            <a href="sections/character.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <span class="nav-text">Создание персонажа</span>
+            </a>
+        </nav>
+
+        <!-- Главная страница -->
+        <main class="content homepage">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">ЭЛЬДОРИЯ</h1>
+                    <div class="hero-divider"></div>
+                    <p class="hero-subtitle">Мир, где магия умерла, но эхо её всё ещё звучит</p>
+                </div>
+            </div>
+
+            <div class="atmosphere-section">
+                <div class="rune-circle">
+                    <div class="rune"></div>
+                    <div class="rune">ᛚ</div>
+                    <div class="rune">ᛞ</div>
+                    <div class="rune">ᛟ</div>
+                    <div class="rune"></div>
+                    <div class="rune">ᛁ</div>
+                    <div class="rune">ᚨ</div>
+                </div>
+            </div>
+
+            <div class="quote-section">
+                <blockquote class="lore-quote">
+                    <p>"Мы возгордились. Мы решили, что Резонанс — наш слуга. Но он был даром, а мы его осквернили. Тишина — это наказание и благословение."</p>
+                    <cite>— Сибилла Безгласная, основательница Немой Церкви</cite>
+                </blockquote>
+            </div>
+
+            <div class="world-teaser">
+                <div class="teaser-card">
+                    <div class="teaser-icon">⚡</div>
+                    <h3>Эпоха Резонанса</h3>
+                    <p>Три тысячи лет золотого века, когда магия была технологией, а империи парили в небесах</p>
+                </div>
+                
+                <div class="teaser-card">
+                    <div class="teaser-icon">💥</div>
+                    <h3>Великое Умолкание</h3>
+                    <p>День, когда мир изменился навсегда. Магия исчезла, цивилизация рухнула, а Какофония была заперта</p>
+                </div>
+                
+                <div class="teaser-card">
+                    <div class="teaser-icon">🌫️</div>
+                    <h3>Эпоха Тишины</h3>
+                    <p>Сто лет после катастрофы. Выжившие строят новый мир среди руин старого</p>
+                </div>
+            </div>
+
+            <div class="explore-section">
+                <h2>Исследуйте мир</h2>
+                <p class="explore-subtitle">Выберите путь познания Эльдории</p>
+                
+                <div class="explore-buttons">
+                    <a href="sections/maps.html" class="explore-btn">
+                        <span class="btn-icon"><i class="fas fa-map-marked-alt"></i></span>
+                        <span class="btn-text">Карты</span>
+                    </a>
+                    <a href="sections/settlements.html" class="explore-btn">
+                        <span class="btn-icon"><i class="fas fa-house-chimney"></i></span>
+                        <span class="btn-text">Поселения</span>
+                    </a>
+                    <a href="sections/dictionary.html" class="explore-btn">
+                        <span class="btn-icon"><i class="fas fa-book-open"></i></span>
+                        <span class="btn-text">Словарь</span>
+                    </a>
+                    <a href="sections/lore.html" class="explore-btn">
+                        <span class="btn-icon"><i class="fas fa-scroll"></i></span>
+                        <span class="btn-text">Лор</span>
+                    </a>
+                    
+                    <!-- ДОБАВЛЕНО: Кнопка Летопись на главной -->
+                    <a href="sections/timeline.html" class="explore-btn">
+                        <span class="btn-icon"><i class="fas fa-history"></i></span>
+                        <span class="btn-text">Летопись</span>
+                    </a>
+
+                    <a href="sections/character.html" class="explore-btn">
+                        <span class="btn-icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="btn-text">Персонаж</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-decoration">
+                <div class="decoration-line"></div>
+                <p class="footer-text">Добро пожаловать в Эльдорию, путник</p>
+                <div class="decoration-line"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тихая Заводь - Эльдория</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS файлы -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <!-- Боковая навигация -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="fas fa-dragon"></i>
+                </div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            
+            <a href="../index.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="nav-text">Главная</span>
+            </a>
+            
+            <a href="maps.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <span class="nav-text">Карты</span>
+            </a>
+            
+            <a href="settlements.html" class="nav-item active">
+                <div class="nav-icon">
+                    <i class="fas fa-house-chimney"></i>
+                </div>
+                <span class="nav-text">Поселения</span>
+            </a>
+            
+            <a href="dictionary.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <span class="nav-text">Словарь</span>
+            </a>
+            
+            <a href="lore.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <span class="nav-text">Лор Эльдории</span>
+            </a>
+            
+            <a href="character.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <span class="nav-text">Создание персонажа</span>
+            </a>
+        </nav>
+
+        <!-- Контент -->
+        <main class="content">
+            <!-- Хлебные крошки -->
+            <div class="breadcrumbs">
+                <a href="settlements.html" class="breadcrumb-link">
+                    <i class="fas fa-arrow-left"></i> Назад к поселениям
+                </a>
+            </div>
+
+            <div class="content-header">
+                <h2><i class="fas fa-home"></i> Тихая Заводь</h2>
+                <p>Стартовая деревня</p>
+            </div>
+
+            <div class="settlement-detail">
+                <div class="settlement-map">
+                    <img src="../maps/Деревня Тихая Заводь.jpg" alt="Тихая Заводь">
+                </div>
+                
+                <div class="settlement-info">
+                    <div class="info-block">
+                        <h4><i class="fas fa-info-circle"></i> Общее описание</h4>
+                        <p><strong>Население:</strong> около 80–90 человек (20 дворов).</p>
+                        <p><strong>Основа экономики:</strong> лесозаготовки, охота, овцеводство, маленькая кузница.</p>
+                        <p><strong>Атмосфера:</strong> уютная бедность. Здесь не голодают, но и не жируют. Все друг друга знают. Незнакомец — событие. По вечерам пахнет дымом, хлебом и немного сыростью из леса.</p>
+                    </div>
+
+                    <div class="residents">
+                        <h4><i class="fas fa-users"></i> Жители</h4>
+                        
+                        <div class="resident-card">
+                            <h5>1. Староста Корвин</h5>
+                            <p><strong>Кто:</strong> мужчина 60 лет, седой, сухощавый, с глубокими морщинами. Глаза добрые, но уставшие. Ходит с тростью — старая рана на ноге. Говорит мало, но весомо.</p>
+                            <p><strong>Роль:</strong> формальный лидер деревни. Решает споры, распределяет запасы, ведёт переговоры с редкими торговцами.</p>
+                            <p><strong>Характер:</strong> спокойный, справедливый, фаталистичный. Он знает, что деревня стоит «на плохом месте», но не знает деталей.</p>
+                        </div>
+
+                        <div class="resident-card">
+                            <h5>2. Травница Морвен</h5>
+                            <p><strong>Кто:</strong> женщина, на вид — 60–70 лет. Сгорбленная. Волосы — седые завязаны в узел на затылке. Всегда носит плащ с капюшоном, даже в тепле. Живёт одна в Хижине Травницы, в часе ходьбы от деревни.</p>
+                            <p><strong>Роль:</strong> целительница. Лечит травами, принимает роды, ухаживает за больными. Бесплатно. Все её любят и уважают.</p>
+                        </div>
+
+                        <div class="resident-card">
+                            <h5>3. Кузнец Бранн</h5>
+                            <p><strong>Кто:</strong> дварф, 50 лет. Единственный дварф в деревне. Кряжистый, с рыжей бородой, прокопчённый дымом горна.</p>
+                            <p><strong>Роль:</strong> кузнец, механик, ремонтник всего, что ломается.</p>
+                            <p><strong>Характер:</strong> ворчливый перфекционист. Мало говорит, но когда говорит — по делу. Недолюбливает Немую Церковь («слишком много болтают о тишине»), но вслух не критикует. Скучает по своему народу, но никогда этого не показывает.</p>
+                        </div>
+
+                        <div class="resident-card">
+                            <h5>4. Хозяйка Пекарни Нора</h5>
+                            <p><strong>Кто:</strong> женщина 35 лет, мать-одиночка. У неё сын, Томин (8 лет).</p>
+                            <p><strong>Роль:</strong> печёт хлеб на всю деревню. Её пекарня — неформальный центр общения. К ней заходят за хлебом и за новостями.</p>
+                            <p><strong>Характер:</strong> добрая, болтливая, немного тревожная. Любит сына больше жизни. Первая замечает странности: мука в мешках иногда шевелится сама по себе, а молоко скисает за час, хотя погреб холодный.</p>
+                        </div>
+
+                        <div class="resident-card">
+                            <h5>5. Охотник Фенн</h5>
+                            <p><strong>Кто:</strong> мужчина 25 лет, поджарый, с вечно настороженным взглядом. Носит старый кожаный доспех. Живёт на окраине, ближе к лесу.</p>
+                            <p><strong>Роль:</strong> главный охотник и следопыт деревни. Снабжает дичью, знает лес как свои пять пальцев. Единственный, кто ходит в Глухомань дальше опушки.</p>
+                            <p><strong>Характер:</strong> молчаливый, независимый, с тёмным чувством юмора. В деревне его уважают, но побаиваются — «слишком долго один в лесу». Пьёт по вечерам, но никогда не напивается до беспамятства.</p>
+                        </div>
+
+                        <div class="resident-card">
+                            <h5>6. Бригадир Марта</h5>
+                            <p><strong>Кто:</strong> женщина 40 лет, крепкая, с обветренным лицом и сильными руками. Руководит бригадой лесорубов в Лагере (полдня пути от деревни).</p>
+                            <p><strong>Роль:</strong> главная по лесозаготовкам. Приходит в деревню раз в неделю — отчитаться перед Старостой, пополнить припасы, набрать работников.</p>
+                            <p><strong>Характер:</strong> грубая, прямолинейная, заботливая по-своему. Стукнет по плечу так, что синяк останется, но первой встанет на защиту своих людей. Не верит в «шепотки и туманы», доверяет только топору и собственным рукам.</p>
+                        </div>
+
+                        <div class="resident-card">
+                            <h5>7. Сын Норы — Томин</h5>
+                            <p><strong>Кто:</strong> мальчик 8 лет. Худой, с большими серыми глазами. Любит рисовать палочкой на земле и играть у Старого Дуба.</p>
+                            <p><strong>Характер:</strong> тихий, мечтательный. Говорит странные вещи. Может сказать: «Дядя, а ты тоже слышишь, как земля дышит?» или «Тётя Морвен говорит, что я особенный, но маме это не нравится».</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

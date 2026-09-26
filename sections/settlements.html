@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поселения - Эльдория</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS файлы -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <!-- Боковая навигация -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="fas fa-dragon"></i>
+                </div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            
+            <a href="../index.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="nav-text">Главная</span>
+            </a>
+            
+            <a href="maps.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <span class="nav-text">Карты</span>
+            </a>
+            
+            <a href="settlements.html" class="nav-item active">
+                <div class="nav-icon">
+                    <i class="fas fa-house-chimney"></i>
+                </div>
+                <span class="nav-text">Поселения</span>
+            </a>
+            
+            <a href="dictionary.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <span class="nav-text">Словарь</span>
+            </a>
+            
+            <a href="lore.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <span class="nav-text">Лор Эльдории</span>
+            </a>
+            
+            <a href="character.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <span class="nav-text">Создание персонажа</span>
+            </a>
+        </nav>
+
+        <!-- Контент -->
+        <main class="content">
+            <div class="content-header">
+                <h2><i class="fas fa-house-chimney"></i> Поселения</h2>
+                <p>Города, деревни и тайные убежища Валдариса</p>
+            </div>
+
+            <div class="settlements-list">
+                <!-- Тихая Заводь -->
+                <a href="settlement-tikhaya-zavod.html" class="settlement-preview-card">
+                    <div class="settlement-preview-image">
+                        <img src="../maps/Деревня Тихая Заводь.jpg" alt="Тихая Заводь">
+                        <div class="settlement-overlay">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="settlement-preview-info">
+                        <h3>Тихая Заводь</h3>
+                        <p class="settlement-type">Стартовая деревня</p>
+                        <p class="settlement-description">
+                            Уютная деревня лесорубов и охотников. Население: 80-90 человек. 
+                            Здесь не голодают, но и не жируют. Все друг друга знают.
+                        </p>
+                        <div class="settlement-tags">
+                            <span class="tag"><i class="fas fa-users"></i> 80-90 жителей</span>
+                            <span class="tag"><i class="fas fa-tree"></i> Лесозаготовки</span>
+                            <span class="tag"><i class="fas fa-bow-arrow"></i> Охота</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Заглушка для будущих поселений -->
+                <div class="settlement-preview-card coming-soon">
+                    <div class="settlement-preview-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="settlement-preview-info">
+                        <h3>Скоро...</h3>
+                        <p class="settlement-type">Новые поселения</p>
+                        <p class="settlement-description">
+                            В разработке: Эренталь, Хара-Зим, Эльдамир и другие локации мира Эльдории.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

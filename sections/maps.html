@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карты - Эльдория</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS файлы -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <!-- Боковая навигация -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon">
+                    <i class="fas fa-dragon"></i>
+                </div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            
+            <a href="../index.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="nav-text">Главная</span>
+            </a>
+            
+            <a href="maps.html" class="nav-item active">
+                <div class="nav-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <span class="nav-text">Карты</span>
+            </a>
+            
+            <a href="settlements.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-house-chimney"></i>
+                </div>
+                <span class="nav-text">Поселения</span>
+            </a>
+            
+            <a href="dictionary.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <span class="nav-text">Словарь</span>
+            </a>
+            
+            <a href="lore.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <span class="nav-text">Лор Эльдории</span>
+            </a>
+            
+            <a href="character.html" class="nav-item">
+                <div class="nav-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <span class="nav-text">Создание персонажа</span>
+            </a>
+        </nav>
+
+        <!-- Контент -->
+        <main class="content">
+            <div class="content-header">
+                <h2><i class="fas fa-map-marked-alt"></i> Карты Мира</h2>
+                <p>Исследуйте земли Эльдории через детальные карты</p>
+            </div>
+            
+            <div class="maps-grid">
+                <div class="map-card">
+                    <h3>Общая карта Валдариса</h3>
+                    <div class="map-container">
+                        <img src="../maps/Общая карта.jpg" alt="Общая карта" class="map-image">
+                    </div>
+                    <p class="map-description">Полная карта континента с обозначением всех регионов, разломов и древних империй</p>
+                </div>
+                
+                <div class="map-card">
+                    <h3>Деревня Тихая Заводь</h3>
+                    <div class="map-container">
+                        <img src="../maps/Деревня Тихая Заводь.jpg" alt="Деревня Тихая Заводь" class="map-image">
+                    </div>
+                    <p class="map-description">Детальная карта стартовой деревни с расположением всех зданий и важных точек</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

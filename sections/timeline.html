@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Летопись - Эльдория</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <!-- Навигация -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon"><i class="fas fa-dragon"></i></div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            <a href="../index.html" class="nav-item"><div class="nav-icon"><i class="fas fa-home"></i></div><span class="nav-text">Главная</span></a>
+            <a href="maps.html" class="nav-item"><div class="nav-icon"><i class="fas fa-map-marked-alt"></i></div><span class="nav-text">Карты</span></a>
+            <a href="settlements.html" class="nav-item"><div class="nav-icon"><i class="fas fa-house-chimney"></i></div><span class="nav-text">Поселения</span></a>
+            <a href="dictionary.html" class="nav-item"><div class="nav-icon"><i class="fas fa-book-open"></i></div><span class="nav-text">Словарь</span></a>
+            <a href="lore.html" class="nav-item"><div class="nav-icon"><i class="fas fa-scroll"></i></div><span class="nav-text">Лор Мира</span></a>
+            <a href="timeline.html" class="nav-item active"><div class="nav-icon"><i class="fas fa-history"></i></div><span class="nav-text">Летопись</span></a>
+            <a href="character.html" class="nav-item"><div class="nav-icon"><i class="fas fa-user-shield"></i></div><span class="nav-text">Персонаж</span></a>
+        </nav>
+
+        <!-- Контент Летописи -->
+        <main class="content timeline-page">
+            <div class="content-header">
+                <h2><i class="fas fa-history"></i> Архив Приключений</h2>
+                <p>История партии. Текущий статус: <span style="color: var(--color-accent-blue)">Сон после Фестиваля</span></p>
+            </div>
+
+            <div class="archive-layout">
+                <!-- Оглавление -->
+                <aside class="chapter-list">
+                    
+                    <!-- ПРОЛОГ (АКТИВЕН) -->
+                    <div class="chapter-item active" onclick="showChapter('prologue')">
+                        <div class="chapter-status current"><i class="fas fa-moon"></i></div>
+                        <div class="chapter-info">
+                            <span class="chapter-type">Пролог</span>
+                            <h4>«Дела житейские»</h4>
+                            <span class="chapter-sub">Часть игры 3 • В процессе</span>
+                        </div>
+                    </div>
+
+                    <!-- АКТ 1 (ЗАБЛОКИРОВАН) -->
+                    <div class="chapter-item locked" onclick="showChapter('act1')">
+                        <div class="chapter-status"><i class="fas fa-lock"></i></div>
+                        <div class="chapter-info">
+                            <span class="chapter-type">Акт I</span>
+                            <h4>Безмолвный Свидетель</h4>
+                            <span class="chapter-sub">Заблокировано</span>
+                        </div>
+                    </div>
+
+                    <!-- АКТ 2 (ЗАБЛОКИРОВАН) -->
+                    <div class="chapter-item locked">
+                        <div class="chapter-status"><i class="fas fa-lock"></i></div>
+                        <div class="chapter-info">
+                            <span class="chapter-type">Акт II</span>
+                            <h4>*****</h4>
+                            <span class="chapter-sub">Заблокировано</span>
+                        </div>
+                    </div>
+
+                </aside>
+
+                <!-- Область чтения -->
+                <section class="chapter-viewer">
+                    
+                    <!-- КОНТЕНТ ПРОЛОГА -->
+                    <div id="chapter-prologue" class="chapter-content active">
+                        <div class="chapter-hero">
+                            <h3>Пролог: «Дела житейские»</h3>
+                            <div class="chapter-meta">
+                                <span><i class="fas fa-calendar"></i> Осень, 2 дня до Фестиваля</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Тихая Заводь</span>
+                            </div>
+                            <p class="chapter-intro">
+                                Тон: Уютное, немного меланхоличное фэнтези. Атмосфера осени, сбора урожая и последних теплых дней.
+                            </p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-door-open"></i> Прибытие и Знакомство</h4>
+                            <p>Игроки — местные жители или наёмные работники. Вечер у общего очага на центральной площади. Знакомство со Старостой Корвином, Норой и Фенном. Чисто ролевая сцена для установления связей.</p>
+                        </div>
+
+                        <div class="event-block highlight">
+                            <h4><i class="fas fa-piggy-bank"></i> Сбежавший Поросёнок</h4>
+                            <p class="quest-desc"><strong>Завязка:</strong> Пастух просит найти поросёнка в Глухомани. Награда — лучшая овца.</p>
+                            <ul class="quest-steps">
+                                <li><strong>Поиск:</strong> Следы ведут в лес (Выживание СЛ 10).</li>
+                                <li><strong>Находка:</strong> В овраге поросёнок <em>левитирует</em> среди светящихся цветов.</li>
+                                <li><strong>Итог:</strong> Поросёнок возвращён. Цветок изъят Корвином.</li>
+                            </ul>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-glass-cheers"></i> Фестиваль Урожая</h4>
+                            <p>Кульминация уюта. Состязания с Фенном и Бранном, помощь Норе. Томин дарит рисунок с символом Узла. Морвен предупреждает о скоротечности тепла.</p>
+                        </div>
+
+                        <div class="event-block current-status">
+                            <h4><i class="fas fa-bed"></i> Текущий момент</h4>
+                            <p>Фестиваль окончен. Игроки, уставшие и счастливые, ложатся спать. Это момент наивысшего уюта и покоя перед тем, как всё изменится.</p>
+                            <div class="status-badge pulsing">Глава активна...</div>
+                        </div>
+                    </div>
+
+                    <!-- ЗАГЛУШКА ДЛЯ АКТА 1 -->
+                    <div id="chapter-act1" class="chapter-content locked-view">
+                        <div class="lock-message">
+                            <i class="fas fa-lock"></i>
+                            <h3>Акт I: Безмолвный Свидетель</h3>
+                            <p>Эта глава начнется сразу после завершения Пролога. Следите за обновлениями...</p>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        function showChapter(id) {
+            // Сброс активных классов
+            document.querySelectorAll('.chapter-item').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.chapter-content').forEach(el => el.classList.remove('active'));
+
+            if (id === 'act1') {
+                // Если кликнули на закрытый акт
+                document.querySelectorAll('.chapter-item')[1].classList.add('active');
+                document.getElementById('chapter-act1').classList.add('active');
+            } else {
+                // Если кликнули на пролог
+                document.querySelectorAll('.chapter-item')[0].classList.add('active');
+                document.getElementById('chapter-prologue').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
