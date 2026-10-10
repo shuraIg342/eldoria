@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карты - Эльдория</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon"><i class="fas fa-dragon"></i></div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            <a href="../index.html" class="nav-item"><div class="nav-icon"><i class="fas fa-home"></i></div><span class="nav-text">Главная</span></a>
+            <a href="maps.html" class="nav-item active"><div class="nav-icon"><i class="fas fa-map-marked-alt"></i></div><span class="nav-text">Карты</span></a>
+            <a href="settlements.html" class="nav-item"><div class="nav-icon"><i class="fas fa-house-chimney"></i></div><span class="nav-text">Поселения</span></a>
+            <a href="dictionary.html" class="nav-item"><div class="nav-icon"><i class="fas fa-book-open"></i></div><span class="nav-text">Словарь</span></a>
+            <a href="lore.html" class="nav-item"><div class="nav-icon"><i class="fas fa-scroll"></i></div><span class="nav-text">Лор Эльдории</span></a>
+            <a href="timeline.html" class="nav-item"><div class="nav-icon"><i class="fas fa-history"></i></div><span class="nav-text">Летопись</span></a>
+            <a href="character.html" class="nav-item"><div class="nav-icon"><i class="fas fa-user-shield"></i></div><span class="nav-text">Создание персонажа</span></a>
+            <!-- ДОБАВЛЕНО: Ссылка на Достижения -->
+            <a href="achievements.html" class="nav-item"><div class="nav-icon"><i class="fas fa-trophy"></i></div><span class="nav-text">Достижения</span></a>
+        </nav>
+
+        <main class="content">
+            <div class="content-header">
+                <h2><i class="fas fa-map-marked-alt"></i> Карты Мира</h2>
+                <p>Нажмите на карту, чтобы открыть её в полном размере и приблизить</p>
+            </div>
+            <div class="maps-grid">
+                <div class="map-card">
+                    <h3>Общая карта Валдариса</h3>
+                    <div class="map-container map-clickable">
+                        <img src="../maps/Общая карта.jpg" alt="Общая карта" class="map-image" data-full="../maps/Общая карта.jpg">
+                        <div class="map-zoom-hint"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <p class="map-description">Полная карта континента с обозначением всех регионов, разломов и древних империй</p>
+                </div>
+                <div class="map-card">
+                    <h3>Деревня Тихая Заводь</h3>
+                    <div class="map-container map-clickable">
+                        <img src="../maps/Деревня Тихая Заводь.jpg" alt="Деревня Тихая Заводь" class="map-image" data-full="../maps/Деревня Тихая Заводь.jpg">
+                        <div class="map-zoom-hint"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <p class="map-description">Детальная карта стартовой деревни с расположением всех зданий и важных точек</p>
+                </div>
+                <div class="map-card">
+                    <h3>Лагерь Лесорубов</h3>
+                    <div class="map-container map-clickable">
+                        <img src="../maps/Лагерь лесорубов.png" alt="Лагерь Лесорубов" class="map-image" data-full="../maps/Лагерь лесорубов.png">
+                        <div class="map-zoom-hint"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                    <p class="map-description">Рабочий лагерь на опушке Глухомани, в полудне пути от Тихой Заводи. Место, где рубят лес и ночуют в бараках</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Модальное окно для просмотра карт с зумом -->
+    <div id="map-modal" class="map-modal">
+        <div class="map-modal-content">
+            <button class="map-modal-close"><i class="fas fa-times"></i></button>
+            <div class="map-zoom-controls">
+                <button class="zoom-btn zoom-in" title="Приблизить"><i class="fas fa-plus"></i></button>
+                <button class="zoom-btn zoom-out" title="Отдалить"><i class="fas fa-minus"></i></button>
+                <button class="zoom-btn zoom-reset" title="Сбросить"><i class="fas fa-compress-arrows-alt"></i></button>
+            </div>
+            <div class="map-image-wrapper">
+                <img src="" alt="Полная карта" class="map-modal-image" id="modalImage">
+            </div>
+            <div class="map-modal-caption"></div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/map-lightbox.js"></script>
+    <!-- Скрипт load-sidebar.js УДАЛЕН, так как меню прописано вручную -->
+</body>
+</html>

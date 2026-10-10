@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Летопись - Эльдория</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon"><i class="fas fa-dragon"></i></div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            <a href="../index.html" class="nav-item"><div class="nav-icon"><i class="fas fa-home"></i></div><span class="nav-text">Главная</span></a>
+            <a href="maps.html" class="nav-item"><div class="nav-icon"><i class="fas fa-map-marked-alt"></i></div><span class="nav-text">Карты</span></a>
+            <a href="settlements.html" class="nav-item"><div class="nav-icon"><i class="fas fa-house-chimney"></i></div><span class="nav-text">Поселения</span></a>
+            <a href="dictionary.html" class="nav-item"><div class="nav-icon"><i class="fas fa-book-open"></i></div><span class="nav-text">Словарь</span></a>
+            <a href="lore.html" class="nav-item"><div class="nav-icon"><i class="fas fa-scroll"></i></div><span class="nav-text">Лор Эльдории</span></a>
+            <a href="timeline.html" class="nav-item active"><div class="nav-icon"><i class="fas fa-history"></i></div><span class="nav-text">Летопись</span></a>
+            <a href="character.html" class="nav-item"><div class="nav-icon"><i class="fas fa-user-shield"></i></div><span class="nav-text">Создание персонажа</span></a>
+            <!-- ДОБАВЛЕНО: Ссылка на Достижения -->
+            <a href="achievements.html" class="nav-item"><div class="nav-icon"><i class="fas fa-trophy"></i></div><span class="nav-text">Достижения</span></a>
+        </nav>
+
+        <main class="content timeline-page">
+            <div class="content-header">
+                <h2><i class="fas fa-history"></i> Архив Приключений</h2>
+                <p>История партии. Текущий статус: <span style="color: var(--color-accent-blue)">Путь к Хара-Зиму</span></p>
+            </div>
+
+            <div class="archive-layout">
+                <!-- Оглавление -->
+                <aside class="chapter-list">
+                    
+                    <!-- ПРОЛОГ (ЗАВЕРШЁН) -->
+                    <div class="chapter-item completed" onclick="showChapter('prologue')">
+                        <div class="chapter-status"><i class="fas fa-check"></i></div>
+                        <div class="chapter-info">
+                            <span class="chapter-type">Пролог</span>
+                            <h4>«Дела житейские»</h4>
+                            <span class="chapter-sub">
+                                <i class="fas fa-clock"></i> 3 часа
+                                <span class="status-divider">•</span>
+                                Завершён
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- АКТ 1 (ЗАВЕРШЁН) -->
+                    <div class="chapter-item completed" onclick="showChapter('act1')">
+                        <div class="chapter-status"><i class="fas fa-check"></i></div>
+                        <div class="chapter-info">
+                            <span class="chapter-type">Акт I</span>
+                            <h4>Безмолвный Свидетель</h4>
+                            <span class="chapter-sub">
+                                <i class="fas fa-clock"></i> 3 часа
+                                <span class="status-divider">•</span>
+                                Завершён
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- АКТ 2 (АКТИВЕН) -->
+                    <div class="chapter-item active" onclick="showChapter('act2')">
+                        <div class="chapter-status current"><i class="fas fa-hourglass-half"></i></div>
+                        <div class="chapter-info">
+                            <span class="chapter-type">Акт II</span>
+                            <h4>«Эхо Прошлого»</h4>
+                            <span class="chapter-sub">
+                                <i class="fas fa-clock"></i> В процессе...
+                            </span>
+                        </div>
+                    </div>
+
+                </aside>
+
+                <!-- Область чтения -->
+                <section class="chapter-viewer">
+                    
+                    <!-- КОНТЕНТ ПРОЛОГА -->
+                    <div id="chapter-prologue" class="chapter-content">
+                        <div class="chapter-hero">
+                            <h3>Пролог: «Дела житейские»</h3>
+                            <div class="chapter-meta">
+                                <span><i class="fas fa-calendar"></i> Осень, 2 дня до Фестиваля</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Тихая Заводь</span>
+                                <span class="status-badge completed-badge"><i class="fas fa-check"></i> Завершён</span>
+                            </div>
+                            <p class="chapter-intro">Тон: Уютное, немного меланхоличное фэнтези. Атмосфера осени, сбора урожая и последних теплых дней.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-door-open"></i> Прибытие и Знакомство</h4>
+                            <p>Игроки — местные жители или наёмные работники. Вечер у общего очага на центральной площади. Знакомство со Старостой Корвином, Норой и Фенном. Чисто ролевая сцена для установления связей.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-piggy-bank"></i> Сбежавший Поросёнок</h4>
+                            <p class="quest-desc"><strong>Завязка:</strong> Пастух просит найти поросёнка в Глухомани. Награда — лучшая овца.</p>
+                            <ul class="quest-steps">
+                                <li><strong>Поиск:</strong> Следы ведут в лес (Выживание СЛ 10).</li>
+                                <li><strong>Находка:</strong> В овраге поросёнок <em>левитирует</em> среди светящихся цветов.</li>
+                                <li><strong>Итог:</strong> Поросёнок возвращён. Цветок изъят Корвином.</li>
+                            </ul>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-glass-cheers"></i> Фестиваль Урожая</h4>
+                            <p>Кульминация уюта. Состязания с Фенном и Браннном, помощь Норе. Томин дарит рисунок с символом Узла. Морвен предупреждает о скоротечности тепла.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-bed"></i> Финал Пролога</h4>
+                            <p>Фестиваль окончен. Игроки, уставшие и счастливые, ложатся спать. Это момент наивысшего уюта и покоя перед тем, как всё изменится.</p>
+                        </div>
+                    </div>
+
+                    <!-- КОНТЕНТ АКТА 1 -->
+                    <div id="chapter-act1" class="chapter-content">
+                        <div class="chapter-hero">
+                            <h3>Акт I: «Безмолвный Свидетель»</h3>
+                            <div class="chapter-meta">
+                                <span><i class="fas fa-calendar"></i> Осень, после Фестиваля</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Тихая Заводь → Глухомань → Барсучьи Холмы</span>
+                                <span class="status-badge completed-badge"><i class="fas fa-check"></i> Завершён</span>
+                            </div>
+                            <p class="chapter-intro">Тон: Тревожное фэнтези. Уют сменяется паранойей. Лес молчит. Туман пахнет гарью. То, что было знакомо, становится чужим.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-road"></i> Дорога к Метеостанции</h4>
+                            <p>Игроки выходят из Тихой Заводи на северо-восток, по тропе к Лагерю Лесорубов. Метеостанция находится дальше — у Барсучьих Холмов, в глубине Глухомани. День пути.</p>
+                            <p><strong>Атмосфера:</strong> лес меняется. Сначала — знакомые тропы, где Фенн охотится на оленей. Но чем дальше, тем тише.</p>
+                        </div>
+
+                        <div class="event-block highlight">
+                            <h4><i class="fas fa-shoe-prints"></i> Случайная находка</h4>
+                            <p class="quest-desc"><strong>На развилке тропы:</strong> старый детский ботинок. Внутри — засохший светящийся цветок (Эльф взял его с собой). Рядом — следы, уходящие в чащу.</p>
+                            <p>Следы приводят к небольшой поляне с <strong>идеально ровным кругом выжженной земли</strong>. В центре — горстка пепла. Проверка Магии показывает: это не огонь. Это что-то, что «выжгло» саму жизнь.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-campground"></i> Привал у Лагеря Лесорубов</h4>
+                            <p>Марта встречает игроков настороженно. Подтверждает: <em>«В лесу неладно. Зверь уходит на восток. И туман... он пахнет не сыростью. Он пахнет гарью»</em>.</p>
+                            <p>Даёт флягу крепкого самогона «для храбрости». <strong>Варвар выбухал её и получил шишку в жопу</strong> (спасибо чернокожему другу за идею).</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-broadcast-tower"></i> Метеостанция «Барсучьи Холмы»</h4>
+                            <p>К вечеру игроки добираются до холмов. Метеостанция — полуразрушенная каменная башня Империи, увитая плющом. На вершине — ржавый флюгер в форме птицы. Дверь тяжёлая, но не заколочена.</p>
+                            <p><strong>Первый этаж:</strong> круглая комната. Пыль, паутина, сломанная мебель. Стены покрыты мхом. В центре — винтовая лестница, ведущая <em>вниз</em>. Метеостанция уходит под землю на три этажа.</p>
+                        </div>
+
+                        <div class="event-block highlight">
+                            <h4><i class="fas fa-flask"></i> Подвал — Главная Лаборатория</h4>
+                            <p>Здесь игроки находят:</p>
+                            <ul class="quest-steps">
+                                <li>Старые столы с истлевшими бумагами (ничего нельзя прочесть)</li>
+                                <li>Разбитые колбы и медные инструменты</li>
+                                <li><strong>Барометр</strong> — массивный прибор на стене. Стекло треснуло, ртуть вытекла. Починить невозможно.</li>
+                                <li>В углу, в темноте — <strong>Автоматон-Хранитель</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-robot"></i> Автоматон-Хранитель</h4>
+                            <p>Выглядит как старый, покосившийся дровосек из металла и дерева. Рост — около метра. Один глаз — тусклый рубин, второй — пустая глазница. Одна рука заменена на ржавую кочергу.</p>
+                            <p><strong>Пробуждение:</strong> когда кто-то касается барометра или подходит к автоматону, рубин загорается красным. Он дёргается, встаёт и говорит скрипучим голосом:</p>
+                            <blockquote>«Цикл... завершён. Узник... начинает забывать. Когда Узник забудет себя... Тишина... умолкнет. Хранитель... должен... наблюдать. Наблюдаю. Наблюдаю. Наблюдаю...»</blockquote>
+                            <p>Он не опасен. Сломлен и дезориентирован. Выполняет последний приказ, отданный 100 лет назад — вести наблюдения за состоянием «Узника».</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-tools"></i> Взаимодействие с Автоматоном</h4>
+                            <ul class="quest-steps">
+                                <li><strong>Починка речевого модуля:</strong> он говорит яснее — <em>«Якорь Западный ослаб. Хранительница близко. Туман ищет... ищет Дитя»</em></li>
+                                <li><strong>Осмотр корпуса:</strong> выгравирован символ — три линии, сходящиеся в одной точке. Тот самый Узел.</li>
+                                <li><strong>Информация:</strong> он охраняет «Протокол Тишины». «Узник» — то, что заперто в Узле под землёй. «Хранительница» — Морвен. <em>«Она... устала. Она... передумала»</em></li>
+                                <li><strong>Координаты других точек:</strong> Остов Хара-Зима, Монастырь Безмолвия, и одна точка... <strong>прямо под Тихой Заводью</strong></li>
+                                <li><strong>Про туман:</strong> <em>«Давление растёт. Туман придёт... скоро. Очень скоро»</em></li>
+                            </ul>
+                            <p class="quest-desc"><strong>Важно:</strong> барометр починить нельзя. Но автоматон <em>уничтожил</em> барометр — он сам работает как барометр, чувствуя давление Резонанса.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-arrow-left"></i> Возвращение в Тихую Заводь</h4>
+                            <p><strong>Дорога обратно:</strong> лес стал другим. Тишина — полная. Даже ветра нет. На тропе — мёртвый олень. Без ран. Просто мёртвый. В лесу игроков окружали тёмные фигуры, но ничего серьёзного не представляли.</p>
+                        </div>
+
+                        <div class="event-block highlight">
+                            <h4><i class="fas fa-exclamation-triangle"></i> Прибытие в деревню (утро)</h4>
+                            <p>На окраине их встречает заплаканная Нора. Она бросается к игрокам:</p>
+                            <blockquote>«Томин... Томин ушёл! Он встал ночью и пошёл в лес. Я не успела... он не отвечал, он просто шёл с открытыми глазами! Фенн пошёл за ним, но не вернулся!»</blockquote>
+                            <p>Мальчик исчез. Охотник — тоже. Староста Корвин собирает поисковый отряд, но сам идти не может — нога.</p>
+                            <p><strong>Следы:</strong> игроки находят следы Томина и Фенна. Они ведут в одну сторону — к <strong>Хижине Травницы</strong>.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-home"></i> Хижина Травницы</h4>
+                            <p>Хижина выглядит мирно. Свет в окне. Дым из трубы. Морвен сидит на крыльце, пьёт чай. Увидев игроков, она улыбается:</p>
+                            <blockquote>«А, вот и вы. Я вас ждала. Заходите. Разговор будет долгий и... неприятный»</blockquote>
+                            <p><strong>Внутри:</strong> Томин спит на кровати. Он в порядке. Фенн сидит у стены, связанный, с кляпом во рту. Он в ярости, но не ранен.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-comments"></i> Разговор с Морвен</h4>
+                            <p>Она спокойна, как удав. Она знает об автоматоне. Знает, что игроки были на станции. Знает всё.</p>
+                            <p><strong>Правда о Тишине и Какофонии:</strong> <em>«Мы заперли зверя в клетке. Но клетка убивает мир. Я думала, что спасаю человечество. Теперь я знаю: я лишь отсрочила конец. Тишина — это смерть. Медленная, тихая, но смерть»</em></p>
+                            <p><strong>Её план:</strong> использовать Томина. Мальчик — <strong>Дитя Резонанса</strong>. Он слышит Какофонию. Через него можно открыть клетку без разрушения Якорей. Не выпустить зверя — а <em>договориться</em> с ним. <em>«Какофония — не зло. Она — новая форма жизни. Мы должны слиться с ней, а не бежать»</em></p>
+                            <p><strong>Просьба:</strong> <em>«Я не враг вам. Я та, кто дал вам 100 лет мира. Теперь я прошу вас помочь мне закончить начатое»</em></p>
+                        </div>
+
+                        <div class="event-block highlight">
+                            <h4><i class="fas fa-handshake"></i> Выбор игроков: ПОМОЧЬ</h4>
+                            <p>Игроки соглашаются помочь Морвен.</p>
+                            <p>Морвен развязывает Фенна, но просит его уйти. Он отказывается и убегает в лес, клянясь поднять деревню. Морвен не препятствует: <em>«Пусть бежит. Когда всё закончится, он поймёт»</em>.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-flag-checkered"></i> Финал Акта 1</h4>
+                            <ul class="quest-steps">
+                                <li>Морвен идёт к Старосте Корвину вместе с игроками. Объясняет всё. Корвин в ужасе, но Морвен убеждает его <strong>добровольно отдать амулет</strong>. Он соглашается — не потому что верит ей, а потому что верит игрокам. <em>«Если вы с ней... значит, так надо»</em></li>
+                                <li>Томин остаётся с Морвен. Она учит его слышать Резонанс без страха.</li>
+                                <li>Деревня в панике. Жители разделяются: кто-то верит игрокам, кто-то считает их предателями. Нора в ярости — она думает, что у неё украли сына.</li>
+                            </ul>
+                        </div>
+
+                        <div class="event-block current-status">
+                            <h4><i class="fas fa-map-pin"></i> Итог Акта 1</h4>
+                            <p>Морвен, игроки и Томин стоят у входа в <strong>подземную лабораторию под колодцем</strong>. Морвен говорит:</p>
+                            <blockquote>«То, что мы сделаем — изменит мир. Вы готовы?»</blockquote>
+                            <div class="status-badge completed-badge">Акт завершён</div>
+                        </div>
+
+                        <div class="event-block consequences">
+                            <h4><i class="fas fa-balance-scale"></i> Последствия и цели</h4>
+                            
+                            <div class="consequence-block">
+                                <h5><i class="fas fa-users"></i> Новая фракция</h5>
+                                <p>Игроки становятся частью плана Морвен. Они не враги Церкви — они враги самой Тишины.</p>
+                            </div>
+
+                            <div class="consequence-block">
+                                <h5><i class="fas fa-bullseye"></i> Цель Акта 2</h5>
+                                <p>Спуститься в лабораторию под колодцем, найти способ пробудить Якоря и открыть клетку Какофонии. Для этого нужно посетить три точки:</p>
+                                <ul class="quest-steps">
+                                    <li><strong>Руины под деревней</strong> — первая точка наблюдения</li>
+                                    <li><strong>Остов Хара-Зима</strong> — Восточный Якорь</li>
+                                    <li><strong>Монастырь Безмолвия</strong> — архив с записями о ритуале</li>
+                                </ul>
+                            </div>
+
+                            <div class="consequence-block warning-block">
+                                <h5><i class="fas fa-exclamation-circle"></i> Моральная дилемма</h5>
+                                <p>Морвен <strong>не говорит всей правды</strong>. Открытие клетки может не «слить» человечество с Какофонией, а уничтожить его.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- КОНТЕНТ АКТА 2 -->
+                    <div id="chapter-act2" class="chapter-content active">
+                        <div class="chapter-hero">
+                            <h3>Акт II: «Эхо Прошлого»</h3>
+                            <div class="chapter-meta">
+                                <span><i class="fas fa-calendar"></i> Осень, после открытия лаборатории</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Тихая Заводь (Подземелье) → Путь на Восток</span>
+                                <span class="status-badge pulsing"><i class="fas fa-hourglass-half"></i> В процессе...</span>
+                            </div>
+                            <p class="chapter-intro">Тон: Древние технологии против живой крови. Контраст между стерильным прошлым Империи и грязной реальностью выживших. Трагедия неизбежна.</p>
+                        </div>
+
+                        <div class="event-block highlight">
+                            <h4><i class="fas fa-dungeon"></i> Сцена 1: Лаборатория под колодцем</h4>
+                            <p>Морвен подводит игроков к колодцу на центральной площади. Она снимает с шеи медальон и прикладывает его к каменному бортику. Раздаётся тяжёлый механический щелчок — эхо технологий Резонанса.</p>
+                            <p>Дно колодца расходится, открывая винтовую лестницу из идеального, не ржавеющего металла. <strong>Атмосфера:</strong> резкий контраст с деревней. Здесь нет сырости и грязи. Стены гладкие, покрытые тусклым самосветящимся мхом — древним освещением, которое не гасло 100 лет.</p>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-microchip"></i> Что они находят</h4>
+                            <ul class="quest-steps">
+                                <li><strong>Технологии:</strong> Голографические проекции (мерцают и сбоют), стазис-капсулы (пустые, но внутри видны окаменевшие остатки растений), автоматические двери, реагирующие на движение.</li>
+                                <li><strong>Центральный зал:</strong> Огромный круглый стол. В центре — пьедестал с углублением под амулет Старосты.</li>
+                            </ul>
+                        </div>
+
+                        <div class="event-block">
+                            <h4><i class="fas fa-ghost"></i> Голограммы (История)</h4>
+                            <p>Когда игроки активируют стол, появляются призрачные фигуры Элиаса, Двалина, Лиары и молодой Морвен. Они обсуждают Ритуал.</p>
+                            <p>Записи показывают, что Морвен была предана делу, плакала, когда Якоря жертвовали собой. Она была верным Хранителем. <strong>Это сбивает игроков с толку:</strong> как эта добрая женщина из записей стала той, кто сейчас стоит рядом с ними?</p>
+                        </div>
+
+                        <div class="event-block highlight">
+                            <h4><i class="fas fa-bolt"></i> Активация и Сбой</h4>
+                            <p>Игрок с амулетом вставляет его в пьедестал. Но Резонанс Томина (которого Морвен привела с собой) вызывает сбой в охранных системах.</p>
+                            <p><strong>Бой:</strong> Из стен выходят два <strong>Стража-Автоматона</strong> (бывшие големы Террамора). Они не убивают, а пытаются «изолировать аномалию» — захватить игроков в силовые поля.</p>
+                        </div>
+
+                        <div class="event-block tragedy">
+                            <h4><i class="fas fa-skull-crossbones"></i> Цена Победы</h4>
+                            <p>Во время боя происходят трагические события:</p>
+                            <ul class="quest-steps">
+                                <li><strong>Варвар</strong> одолел одного автомата и рванул защищать Морвен, но погиб от своего же оружия.</li>
+                                <li><strong>Плут</strong>, у которого остался 1 ХП, остановил автоматов тем, что просто стукнул по пьедесталу на столе. Automatoны ушли обратно в стены.</li>
+                                <li>Плут начал лутать Варвара. В этот момент спустился Эльф из их партии и дал ему подзатыльник за то, тот украл у него деньги — <strong>тем самым убив Плута</strong>.</li>
+                            </ul>
+                            <p class="quest-desc" style="border-color: #ef4444; background: rgba(239, 68, 68, 0.05);"><strong>Итог:</strong> Два героя погибли в холодных стенах древней лаборатории. Их эхо останется здесь навсегда.</p>
+                        </div>
+
+                        <div class="event-block current-status">
+                            <h4><i class="fas fa-map-marked-alt"></i> Текущий момент</h4>
+                            <p>После боя стол проецирует карту Валдариса с тремя пульсирующими точками (Якорями) и одной центральной (Узел под треугольником).</p>
+                            <p>Морвен говорит: <em>«Нам нужно ослабить три замка. Начнём с Восточного. С Хара-Зима»</em>.</p>
+                            <div class="status-badge pulsing">Цель: Добраться до Хара-Зима</div>
+                        </div>
+
+                        <div class="event-block consequences">
+                            <h4><i class="fas fa-route"></i> Цели и последствия</h4>
+                            
+                            <div class="consequence-block">
+                                <h5><i class="fas fa-mountain"></i> Следующая цель</h5>
+                                <p>Добраться до <strong>Остова Хара-Зима</strong> — Восточного Якоря. Это бывшая летающая столица Империи Аэридаль, ныне лежащая в руинах.</p>
+                            </div>
+
+                            <div class="consequence-block warning-block">
+                                <h5><i class="fas fa-heart-crack"></i> Потери</h5>
+                                <p>Партия понесла тяжёлые потери. Варвар и Плут погибли. Оставшиеся игроки должны нести бремя их памяти и продолжать путь, несмотря на горе.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <!-- Скрипт load-sidebar.js УДАЛЕН, так как меню прописано вручную -->
+    <script>
+        function showChapter(id) {
+            document.querySelectorAll('.chapter-item').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.chapter-content').forEach(el => el.classList.remove('active'));
+
+            if (id === 'prologue') {
+                document.querySelectorAll('.chapter-item')[0].classList.add('active');
+                document.getElementById('chapter-prologue').classList.add('active');
+            } else if (id === 'act1') {
+                document.querySelectorAll('.chapter-item')[1].classList.add('active');
+                document.getElementById('chapter-act1').classList.add('active');
+            } else if (id === 'act2') {
+                document.querySelectorAll('.chapter-item')[2].classList.add('active');
+                document.getElementById('chapter-act2').classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

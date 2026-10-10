@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --color-bg-primary: #0a0a0f;
+    --color-bg-secondary: #1a1a2e;
+    --color-bg-tertiary: #0f0f1e;
+    --color-border: #2d2d44;
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #9ca3af;
+    --color-accent-purple: #a855f7;
+    --color-accent-blue: #3b82f6;
+    --color-accent-light: #a78bfa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+}
+
+/* Предотвращение масштабирования на iOS */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Плавная прокрутка */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Улучшение рендеринга шрифтов */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Оптимизация для мобильных устройств */
+@media (max-width: 768px) {
+    /* Отключаем hover эффекты на тач-устройствах */
+    @media (hover: none) {
+        #welcome-banner {
+            cursor: default;
+        }
+    }
+    
+    /* Улучшаем читаемость */
+    #welcome-banner {
+        padding: 1rem;
+    }
+}

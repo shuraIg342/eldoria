@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Достижения - Эльдория</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/sections.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div id="main-content" class="visible">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-icon"><i class="fas fa-dragon"></i></div>
+                <div class="sidebar-title">Эльдория</div>
+            </div>
+            <a href="../index.html" class="nav-item"><div class="nav-icon"><i class="fas fa-home"></i></div><span class="nav-text">Главная</span></a>
+            <a href="maps.html" class="nav-item"><div class="nav-icon"><i class="fas fa-map-marked-alt"></i></div><span class="nav-text">Карты</span></a>
+            <a href="settlements.html" class="nav-item"><div class="nav-icon"><i class="fas fa-house-chimney"></i></div><span class="nav-text">Поселения</span></a>
+            <a href="dictionary.html" class="nav-item"><div class="nav-icon"><i class="fas fa-book-open"></i></div><span class="nav-text">Словарь</span></a>
+            <a href="lore.html" class="nav-item"><div class="nav-icon"><i class="fas fa-scroll"></i></div><span class="nav-text">Лор Эльдории</span></a>
+            <a href="timeline.html" class="nav-item"><div class="nav-icon"><i class="fas fa-history"></i></div><span class="nav-text">Летопись</span></a>
+            <a href="character.html" class="nav-item"><div class="nav-icon"><i class="fas fa-user-shield"></i></div><span class="nav-text">Создание персонажа</span></a>
+            <a href="achievements.html" class="nav-item active"><div class="nav-icon"><i class="fas fa-trophy"></i></div><span class="nav-text">Достижения</span></a>
+        </nav>
+
+        <main class="content achievements-page">
+            <div class="content-header">
+                <h2><i class="fas fa-trophy"></i> Зал Славы</h2>
+                <p>Выберите персонажа, чтобы увидеть его достижения</p>
+            </div>
+
+            <!-- Выбор персонажа -->
+            <div class="character-selector">
+                <button class="char-btn active" onclick="showAchievements('karla')">
+                    <div class="char-avatar"><i class="fas fa-music"></i></div>
+                    <div class="char-info">
+                        <span class="player-name">Вова</span>
+                        <h3>Карла</h3>
+                        <span class="char-class">Эльф • Бард</span>
+                    </div>
+                </button>
+                
+                <!-- Заглушки для будущих персонажей -->
+                <button class="char-btn locked" disabled>
+                    <div class="char-avatar"><i class="fas fa-question"></i></div>
+                    <div class="char-info">
+                        <span class="player-name">???</span>
+                        <h3>???</h3>
+                        <span class="char-class">??? • ???</span>
+                    </div>
+                </button>
+                
+                <button class="char-btn locked" disabled>
+                    <div class="char-avatar"><i class="fas fa-question"></i></div>
+                    <div class="char-info">
+                        <span class="player-name">???</span>
+                        <h3>???</h3>
+                        <span class="char-class">??? • ???</span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Таблица достижений Карлы -->
+            <div id="achievements-karla" class="achievements-list active">
+                <div class="achievement-card unlocked">
+                    <div class="ach-icon"><i class="fas fa-handcuffs"></i></div>
+                    <div class="ach-content">
+                        <h3>Американский Полицейский</h3>
+                        <p class="ach-desc">Убить чернокожего напарника</p>
+                        <span class="ach-date">Получено: Акт II, Лаборатория под колодцем</span>
+                    </div>
+                    <div class="ach-badge"><i class="fas fa-check-circle"></i></div>
+                </div>
+
+                <!-- Скрытые достижения -->
+                <div class="achievement-card locked">
+                    <div class="ach-icon blur"><i class="fas fa-lock"></i></div>
+                    <div class="ach-content blur">
+                        <h3>??????????????????</h3>
+                        <p class="ach-desc">????????????????????????????????????????</p>
+                        <span class="ach-date">Не получено</span>
+                    </div>
+                    <div class="ach-badge locked-badge"><i class="fas fa-lock"></i></div>
+                </div>
+
+                <div class="achievement-card locked">
+                    <div class="ach-icon blur"><i class="fas fa-lock"></i></div>
+                    <div class="ach-content blur">
+                        <h3>??????????????????</h3>
+                        <p class="ach-desc">????????????????????????????????????????</p>
+                        <span class="ach-date">Не получено</span>
+                    </div>
+                    <div class="ach-badge locked-badge"><i class="fas fa-lock"></i></div>
+                </div>
+
+                <div class="achievement-card locked">
+                    <div class="ach-icon blur"><i class="fas fa-lock"></i></div>
+                    <div class="ach-content blur">
+                        <h3>??????????????????</h3>
+                        <p class="ach-desc">????????????????????????????????????????</p>
+                        <span class="ach-date">Не получено</span>
+                    </div>
+                    <div class="ach-badge locked-badge"><i class="fas fa-lock"></i></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+ <script src="../js/main.js"></script>
+    <!-- Скрипт load-sidebar.js УДАЛЕН, так как меню прописано вручную -->
+    <script>
+        function showAchievements(charId) {
+            // Убираем активный класс у всех кнопок
+            document.querySelectorAll('.char-btn').forEach(btn => btn.classList.remove('active'));
+            // Добавляем активный класс нажатой кнопке
+            event.currentTarget.classList.add('active');
+            
+            // Здесь можно добавить логику переключения таблиц достижений разных персонажей
+            // Пока что таблица одна, но структура готова для расширения
+        }
+    </script>
+</body>
+</html>

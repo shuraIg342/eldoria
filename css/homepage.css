@@ -1,0 +1,300 @@
+/* Главная страница */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Hero секция */
+.hero-section {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: 
+        radial-gradient(circle at 30% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+        linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: 6rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue), var(--color-accent-purple));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient 3s ease infinite;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 50px rgba(168, 85, 247, 0.5);
+}
+
+.hero-divider {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-purple), transparent);
+    margin: 0 auto 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-accent-light);
+    font-style: italic;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+}
+
+/* Секция с рунами */
+.atmosphere-section {
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+}
+
+.rune-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.rune {
+    position: absolute;
+    font-size: 2.5rem;
+    color: var(--color-accent-purple);
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+    animation: runeGlow 2s ease-in-out infinite;
+}
+
+.rune:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.rune:nth-child(2) { top: 15%; right: 10%; animation-delay: 0.3s; }
+.rune:nth-child(3) { top: 50%; right: 0; transform: translateY(-50%); animation-delay: 0.6s; }
+.rune:nth-child(4) { bottom: 15%; right: 10%; animation-delay: 0.9s; }
+.rune:nth-child(5) { bottom: 0; left: 50%; transform: translateX(-50%); animation-delay: 1.2s; }
+.rune:nth-child(6) { bottom: 15%; left: 10%; animation-delay: 1.5s; }
+.rune:nth-child(7) { top: 50%; left: 0; transform: translateY(-50%); animation-delay: 1.8s; }
+
+@keyframes runeGlow {
+    0%, 100% { opacity: 0.6; text-shadow: 0 0 20px rgba(168, 85, 247, 0.8); }
+    50% { opacity: 1; text-shadow: 0 0 40px rgba(168, 85, 247, 1); }
+}
+
+/* Цитата */
+.quote-section {
+    width: 100%;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+}
+
+.lore-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    border-left: 4px solid var(--color-accent-purple);
+    border-right: 4px solid var(--color-accent-blue);
+    background: rgba(168, 85, 247, 0.05);
+    border-radius: 16px;
+}
+
+.lore-quote p {
+    font-size: 1.3rem;
+    color: var(--color-text-primary);
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.lore-quote cite {
+    color: var(--color-accent-light);
+    font-size: 1rem;
+    font-style: normal;
+}
+
+/* Тизеры эпох */
+.world-teaser {
+    width: 100%;
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teaser-card {
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+    border: 2px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.teaser-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.teaser-card:hover::before {
+    left: 100%;
+}
+
+.teaser-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent-purple);
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
+}
+
+.teaser-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    animation: floating 3s ease-in-out infinite;
+}
+
+.teaser-card:nth-child(2) .teaser-icon {
+    animation-delay: 0.5s;
+}
+
+.teaser-card:nth-child(3) .teaser-icon {
+    animation-delay: 1s;
+}
+
+.teaser-card h3 {
+    font-size: 1.5rem;
+    color: var(--color-accent-purple);
+    margin-bottom: 1rem;
+}
+
+.teaser-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Кнопки исследования */
+.explore-section {
+    width: 100%;
+    padding: 4rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-primary) 100%);
+}
+
+.explore-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-accent-purple);
+    margin-bottom: 1rem;
+}
+
+.explore-subtitle {
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.explore-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.explore-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%);
+    border: 2px solid var(--color-border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.explore-btn:hover::before {
+    left: 100%;
+}
+
+.explore-btn:hover {
+    border-color: var(--color-accent-purple);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+.btn-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Футер */
+.footer-decoration {
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--color-bg-primary);
+}
+
+.decoration-line {
+    flex: 1;
+    max-width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-accent-purple), transparent);
+}
+
+.footer-text {
+    color: #6b7280;
+    font-style: italic;
+    font-size: 1rem;
+}
